@@ -25,10 +25,9 @@ url = "1"
 log = "0.4"
 ring = "0.16"
 quiche = { path = "../quiche" }
-libc = "0.2"
-# Needs update once merged to upstream
-# https://github.com/nix-rust/nix/pull/1564
-nix = { git = "https://github.com/ghedo/nix.git", branch = "so_txtime" }
+libc = "0.2.112"
+# TODO: Update when there is a release tag
+nix = { git = "https://github.com/nix-rust/nix.git", rev = "c84316b7fce588eb9e91b917550a0dfd350dcad1" }
 
 [profile.release]
 debug = true

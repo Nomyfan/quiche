@@ -606,7 +606,7 @@ fn set_txtime_sockopt(sock: &net::UdpSocket) -> io::Result<()> {
     use nix::sys::socket::sockopt::TxTime;
     use std::os::unix::io::AsRawFd;
 
-    let config = libc::sock_txtime {
+    let config = nix::libc::sock_txtime {
         clockid: libc::CLOCK_MONOTONIC,
         flags: 0,
     };
